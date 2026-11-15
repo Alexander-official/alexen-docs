@@ -1,0 +1,132 @@
+[
+ {
+  "text": "Admins",
+  "link": "/api/admin",
+  "count": 10
+ },
+ {
+  "text": "Users",
+  "link": "/api/user",
+  "count": 23
+ },
+ {
+  "text": "User templates",
+  "link": "/api/user-template",
+  "count": 5
+ },
+ {
+  "text": "Subscription",
+  "link": "/api/subscription",
+  "count": 6
+ },
+ {
+  "text": "Subscription statistics",
+  "link": "/api/subscription-statistics",
+  "count": 5
+ },
+ {
+  "text": "Blocked IPs",
+  "link": "/api/blocked-ips",
+  "count": 4
+ },
+ {
+  "text": "Nodes",
+  "link": "/api/node",
+  "count": 20
+ },
+ {
+  "text": "Cores",
+  "link": "/api/core",
+  "count": 12
+ },
+ {
+  "text": "Chains",
+  "link": "/api/chain",
+  "count": 5
+ },
+ {
+  "text": "Outbounds",
+  "link": "/api/outbounds",
+  "count": 3
+ },
+ {
+  "text": "Groups",
+  "link": "/api/groups",
+  "count": 4
+ },
+ {
+  "text": "Settings",
+  "link": "/api/settings",
+  "count": 32
+ },
+ {
+  "text": "Online users",
+  "link": "/api/online",
+  "count": 5
+ },
+ {
+  "text": "Traffic",
+  "link": "/api/traffic",
+  "count": 6
+ },
+ {
+  "text": "Statistics",
+  "link": "/api/stats",
+  "count": 1
+ },
+ {
+  "text": "Overview",
+  "link": "/api/overview",
+  "count": 1
+ },
+ {
+  "text": "Activity log",
+  "link": "/api/activity",
+  "count": 1
+ },
+ {
+  "text": "Backups",
+  "link": "/api/backup",
+  "count": 7
+ },
+ {
+  "text": "Telegram",
+  "link": "/api/telegram",
+  "count": 4
+ },
+ {
+  "text": "Notifications",
+  "link": "/api/notifications",
+  "count": 13
+ },
+ {
+  "text": "External panels",
+  "link": "/api/external-panel",
+  "count": 9
+ },
+ {
+  "text": "Profile",
+  "link": "/api/profile",
+  "count": 4
+ },
+ {
+  "text": "System",
+  "link": "/api/system",
+  "count": 9
+ },
+ {
+  "text": "Updates",
+  "link": "/api/update",
+  "count": 3
+ },
+ {
+  "text": "VPN",
+  "link": "/api/vpn",
+  "count": 6
+ },
+ {
+  "text": "License",
+  "link": "/api/license",
+  "count": 4
+ }
+]
