@@ -5,6 +5,11 @@ outline: false
 
 # Changelog
 
+## v2.3.18 <span class="date">2026-11-15</span>
+
+- The webhook now fires on host changes too. Adding/editing/moving hosts, and changes to groups, external configs and cores (and adding a node) send a "hosts_changed" event. There is also a new switch: "Send every user again when they change" — about 15 seconds after the last change every user is sent as "user_updated" (several edits in a row send once), so a service that builds a Google Drive file per user can rebuild the files. The page has a "Send all users now" button too. Events go out in slices of 50.
+- Note: the resend works once "Send every user again when they change" is switched on in the Webhook card; it is off by default.
+
 ## v2.3.16 <span class="date">2026-11-15</span>
 
 - External configs now send a device id when they pull a subscription, like Happ: x-hwid together with the x-device-os, x-ver-os and x-device-model headers. Each source has its own HWID (if left empty one is made when you save and never changes); you can paste one or generate a new one. The device OS, version and model are set too. There are ready User-Agent choices (Happ, v2rayNG, Hiddify, Streisand) and a curl preview that shows exactly how the panel pulls the source. Existing sources pull with a fixed HWID automatically; switch off 'Send a device id (HWID) like Happ' to go back.

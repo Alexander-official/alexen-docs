@@ -7,7 +7,7 @@ outline: [2, 3]
 
 Where the panel tells another service about users, with the secret, events and thresholds.
 
-<p class="api-count">4 endpoints</p>
+<p class="api-count">5 endpoints</p>
 
 <section class="ep">
 
@@ -237,6 +237,28 @@ Errors: `401` Unauthorized
 
 ```bash
 curl -X DELETE 'https://YOUR-PANEL/api/webhook' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+</section>
+
+<section class="ep">
+
+## <span class="m m-post">POST</span> `/api/webhook/resync` {#post-api-webhook-resync}
+
+**Resync Webhook**
+
+Send every user to the webhook now, as updated (what "send every user again" does after a host change).
+The events are queued and go out in slices of 50 requests' worth in the next minute.
+
+<p class="badges"><span class="b b-sudo">Sudo admin only</span></p>
+
+**Response** `200` Successful Response
+
+Errors: `401` Unauthorized
+
+```bash
+curl -X POST 'https://YOUR-PANEL/api/webhook/resync' \
   -H 'Authorization: Bearer $TOKEN'
 ```
 

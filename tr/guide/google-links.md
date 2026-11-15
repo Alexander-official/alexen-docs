@@ -31,10 +31,13 @@ Ayarların altındaki **Webhook** kartı, sunucudaki `.env` dosyasının tuttuğ
 | --- | --- |
 | Adresler | Her satıra bir web adresi. Her olay hepsine gönderilir. |
 | Gizli anahtar (secret) | `x-webhook-secret` başlığında gönderilir; servisin isteğin bu panelden geldiğini doğrulayabilir. Tam görünür (sayfayı yalnızca sudo yöneticiler görür); göster, kopyala ve üret düğmeleri var. |
-| Gönderilen olaylar | Kullanıcı oluşturuldu, güncellendi, silindi; durum değişti; kullanım sıfırlandı; abonelik bağlantısı yenilendi; kullanım eşiğine ulaşıldı; kalan gün eşiğine ulaşıldı; yönetici girişi. |
+| Gönderilen olaylar | Kullanıcı oluşturuldu, güncellendi, silindi; durum değişti; kullanım sıfırlandı; abonelik bağlantısı yenilendi; kullanım eşiğine ulaşıldı; kalan gün eşiğine ulaşıldı; yönetici girişi; host, grup, harici config ya da çekirdek değişti. |
+| Tüm kullanıcıları yeniden gönder | Varsayılan kapalı. Host, grup, harici config ya da çekirdek değişince, son değişiklikten yaklaşık 15 saniye sonra her kullanıcı güncellendi olarak gönderilir (arka arkaya birkaç düzenleme tek sefer gönderir). Servisin kullanıcı başına dosya üretiyorsa (örneğin Google Drive dosyası) kullan; host değişince dosyalar yeniden yapılır. **Tüm kullanıcıları şimdi gönder** bunu istediğin an yapar. |
 | Kullanım eşikleri | Kullanıcı bu kadar yüzde kullanınca olay gönder, örneğin `80, 90`. |
 | Kalan gün eşikleri | Bu kadar gün kalınca olay gönder, örneğin `3, 7`. |
 | Yeniden deneme süresi / sayısı | Servisin OK dönmediği olayı ne kadar bekleyip kaç kez yeniden deneyeceği. |
+
+Host değişiklikleri ayrıca bir `hosts_changed` olayı gönderir, örneğin `[{ "action": "hosts_changed", "what": "hosts", "by": "admin" }]`.
 
 **Test olayı gönder**, formdaki adreslere bir test (`action: "test"`) gönderir ve her birinin cevabını gösterir: HTTP durumu ve süre, ya da hata. Kart ayrıca son denemeyi ve kuyrukta bekleyen olay sayısını gösterir.
 

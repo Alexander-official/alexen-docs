@@ -31,10 +31,13 @@ Below the settings, the **Webhook** card holds everything the server's `.env` us
 | --- | --- |
 | Addresses | One web address per line. Every event is posted to all of them. |
 | Secret | Sent in the `x-webhook-secret` header, so your service can check a request is from this panel. Shown in full (only sudo admins see this page), with show, copy and generate buttons. |
-| Events sent | User created, updated, deleted; status changed; usage reset; subscription link renewed; usage threshold reached; days-left threshold reached; admin sign-in. |
+| Events sent | User created, updated, deleted; status changed; usage reset; subscription link renewed; usage threshold reached; days-left threshold reached; admin sign-in; hosts, groups, external configs or cores changed. |
+| Send every user again | Off by default. When hosts, groups, external configs or cores change, every user is sent as updated about 15 seconds after the last change (several edits in a row send once). Use it when your service builds a file per user (for example a Google Drive file), so the files are rebuilt after a host change. **Send all users now** does it on demand. |
 | Usage thresholds | Send an event when a user has used this many percent, for example `80, 90`. |
 | Days-left thresholds | Send an event when this many days are left, for example `3, 7`. |
 | Retry after / Retries | How long to wait and how many times to try again when your service did not answer OK. |
+
+Host changes also send a `hosts_changed` event, for example `[{ "action": "hosts_changed", "what": "hosts", "by": "admin" }]`.
 
 **Send a test event** posts a test (`action: "test"`) to the addresses in the form and shows what each one answered: HTTP status and time, or the error. The card also shows the latest attempt and how many events are waiting.
 

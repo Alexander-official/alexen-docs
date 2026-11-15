@@ -5,6 +5,11 @@ outline: false
 
 # Sürüm notları
 
+## v2.3.18 <span class="date">2026-11-15</span>
+
+- Webhook artık host değişikliklerinde de çalışıyor. Host eklemek/düzenlemek/taşımak, grup, harici config ve çekirdek değişiklikleri (ve node eklemek) bir "hosts_changed" olayı gönderir. Ayrıca yeni anahtar: "Bunlar değişince tüm kullanıcıları yeniden gönder" — son değişiklikten yaklaşık 15 saniye sonra her kullanıcı "user_updated" olarak gönderilir (arka arkaya birkaç düzenleme tek sefer gönderir), böylece kullanıcı başına Google Drive dosyası üreten servis dosyaları yeniden yapabilir. Sayfada "Tüm kullanıcıları şimdi gönder" düğmesi de var. Olaylar 50'şerli gruplar halinde gönderilir.
+- Not: bu, Webhook kartındaki "Bunlar değişince tüm kullanıcıları yeniden gönder" açılınca çalışır; varsayılan kapalı.
+
 ## v2.3.16 <span class="date">2026-11-15</span>
 
 - Harici yapılandırmalarda abonelikten çekerken artık Happ gibi cihaz kimliği gönderiliyor: x-hwid ile birlikte x-device-os, x-ver-os ve x-device-model başlıkları. Her kaynağın kendi HWID'i var (boş bırakılırsa kaydederken üretilir ve hep aynı kalır); elle yapıştırabilir ya da yenisini üretebilirsin. Cihaz işletim sistemi, sürümü ve modeli de ayarlanır. User-Agent için hazır seçenekler (Happ, v2rayNG, Hiddify, Streisand) ve panelin kaynağı tam olarak nasıl çekeceğini gösteren bir curl önizlemesi eklendi. Eski kaynaklar da otomatik olarak sabit bir HWID ile çeker; istemeyenler 'Happ gibi cihaz kimliği gönder' anahtarını kapatır.
