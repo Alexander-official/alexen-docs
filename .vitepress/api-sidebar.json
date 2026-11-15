@@ -30,6 +30,11 @@
   "count": 2
  },
  {
+  "text": "Webhook",
+  "link": "/api/webhook",
+  "count": 4
+ },
+ {
   "text": "Blocked IPs",
   "link": "/api/blocked-ips",
   "count": 4

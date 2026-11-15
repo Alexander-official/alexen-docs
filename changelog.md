@@ -5,6 +5,10 @@ outline: false
 
 # Changelog
 
+## v2.3.15 <span class="date">2026-11-15</span>
+
+- The webhook is now managed from the panel (below Settings → Google links). Everything the .env had is here: addresses, the secret (shown in full, with show/copy/generate), which events are sent (user created/updated/deleted, status change, usage reset, subscription renewed, usage and days-left thresholds, sign-in), the threshold values, and the retry time and count. You can send a test event and see the latest attempt and how many are waiting. Settings saved in the panel win over .env; "Use the .env values" undoes it. No server restart needed.
+
 ## v2.3.14 <span class="date">2026-11-15</span>
 
 - New section: Google links (Settings). A user whose Note starts with a listed link (by default https://www.googleapis.com/ — for example a Google Drive file a webhook writes into the note) is given that link as their subscription link, in the panel, the bot and the QR code. Off by default. You set the link starts, see how many users have such a note, try a note, and see the state of the webhook (WEBHOOK_ADDRESS / WEBHOOK_SECRET).

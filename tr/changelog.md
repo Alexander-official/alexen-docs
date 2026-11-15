@@ -5,6 +5,10 @@ outline: false
 
 # Sürüm notları
 
+## v2.3.15 <span class="date">2026-11-15</span>
+
+- Webhook artık panelden yönetiliyor (Ayarlar → Google bağlantıları sayfasının altında). .env'deki her şey burada: adresler, secret (tam görünür, göster/kopyala/üret), hangi olayların gönderileceği (kullanıcı oluşturma/güncelleme/silme, durum değişimi, kullanım sıfırlama, abonelik yenileme, kullanım ve kalan gün eşikleri, giriş), eşik değerleri, yeniden deneme süresi ve sayısı. Test olayı gönderme, son denemenin sonucu ve kuyrukta bekleyen sayısı da var. Panelde kaydedilen ayarlar .env'nin önüne geçer; "Yeniden .env değerlerini kullan" geri alır. Sunucuyu yeniden başlatmak gerekmez.
+
 ## v2.3.14 <span class="date">2026-11-15</span>
 
 - Yeni bölüm: Google bağlantıları (Ayarlar). Notu listedeki bir bağlantıyla başlayan kullanıcıya (varsayılan https://www.googleapis.com/ — örneğin bir webhook'un nota yazdığı Google Drive dosyası) o bağlantı abonelik bağlantısı olarak verilir; panelde, botta ve QR kodda. Varsayılan kapalı. Bağlantı başlangıçlarını sen belirlersin, kaç kullanıcının böyle bir notu olduğunu görürsün, bir notu deneyebilirsin ve webhook'un durumunu (WEBHOOK_ADDRESS / WEBHOOK_SECRET) görürsün.

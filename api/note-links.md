@@ -30,7 +30,6 @@ how many users have such a note, and the state of the webhook that usually write
 | `prefixes` | `string[]` |  |
 | `matching_users` | `integer` |  |
 | `total_users` | `integer` |  |
-| `webhook` | `object` |  |
 
 </details>
 
@@ -41,8 +40,7 @@ how many users have such a note, and the state of the webhook that usually write
     "string"
   ],
   "matching_users": 0,
-  "total_users": 0,
-  "webhook": {}
+  "total_users": 0
 }
 ```
 
@@ -91,7 +89,6 @@ Turn the note link on or off and set the link starts (`prefixes`, each starting 
 | `prefixes` | `string[]` |  |
 | `matching_users` | `integer` |  |
 | `total_users` | `integer` |  |
-| `webhook` | `object` |  |
 
 </details>
 
@@ -102,8 +99,7 @@ Turn the note link on or off and set the link starts (`prefixes`, each starting 
     "string"
   ],
   "matching_users": 0,
-  "total_users": 0,
-  "webhook": {}
+  "total_users": 0
 }
 ```
 

@@ -23,18 +23,31 @@ Notun yalnızca ilk kelimesi sayılır ve listedeki başlangıçlardan biriyle b
 
 ## Webhook
 
-**Webhook** kartı, panelin başka bir servise olay gönderip göndermediğini gösterir. Burada değil, sunucuda ayarlanır:
+Ayarların altındaki **Webhook** kartı, sunucudaki `.env` dosyasının tuttuğu her şeyi tutar. Buradan yönetirsin; sunucuya girmek ya da yeniden başlatmak gerekmez.
 
-```bash
-alexen env set WEBHOOK_ADDRESS "https://hook.example.com/users"
-alexen env set WEBHOOK_SECRET "uzun-bir-gizli-anahtar"
-alexen restart
+![Webhook ayarları](/img/tr/google-links.webp)
+
+| Ayar | Anlamı |
+| --- | --- |
+| Adresler | Her satıra bir web adresi. Her olay hepsine gönderilir. |
+| Gizli anahtar (secret) | `x-webhook-secret` başlığında gönderilir; servisin isteğin bu panelden geldiğini doğrulayabilir. Tam görünür (sayfayı yalnızca sudo yöneticiler görür); göster, kopyala ve üret düğmeleri var. |
+| Gönderilen olaylar | Kullanıcı oluşturuldu, güncellendi, silindi; durum değişti; kullanım sıfırlandı; abonelik bağlantısı yenilendi; kullanım eşiğine ulaşıldı; kalan gün eşiğine ulaşıldı; yönetici girişi. |
+| Kullanım eşikleri | Kullanıcı bu kadar yüzde kullanınca olay gönder, örneğin `80, 90`. |
+| Kalan gün eşikleri | Bu kadar gün kalınca olay gönder, örneğin `3, 7`. |
+| Yeniden deneme süresi / sayısı | Servisin OK dönmediği olayı ne kadar bekleyip kaç kez yeniden deneyeceği. |
+
+**Test olayı gönder**, formdaki adreslere bir test (`action: "test"`) gönderir ve her birinin cevabını gösterir: HTTP durumu ve süre, ya da hata. Kart ayrıca son denemeyi ve kuyrukta bekleyen olay sayısını gösterir.
+
+Burada kaydedene kadar `.env` değerleri (`WEBHOOK_ADDRESS`, `WEBHOOK_SECRET`, `NOTIFY_*`) geçerlidir ve kart **Şu an .env'den** der. Kaydedince panelin ayarları öne geçer (**Panelden ayarlı**). **Yeniden .env değerlerini kullan** geri alır.
+
+Servisin olayların JSON listesini alır, örneğin:
+
+```json
+[{ "action": "user_created", "username": "demo_user", "by": { "username": "admin" }, "user": { "...": "..." } }]
 ```
-
-Panel gizli anahtarı `x-webhook-secret` başlığında gönderir; servisin isteğin gerçekten panelden geldiğini doğrulayabilir. Olaylar kullanıcı oluşturulunca ya da güncellenince gönderilir.
 
 ::: tip Bağlantı çalışır kalsın
 Nottaki bağlantı yazıldığı gibi kullanılır. Arkasındaki dosya silinirse ya da anahtarı iptal edilirse kullanıcının uygulaması güncellenmez; dosyayı ve anahtarı canlı tut.
 :::
 
-İlgili API: [Note links](/api/note-links).
+İlgili API: [Note links](/api/note-links), [Webhook](/api/webhook).
