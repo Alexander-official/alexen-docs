@@ -155,9 +155,6 @@ outline: false
 - Kullanıcı satırında, adın altında artık kullanıcının aboneliği hangi uygulamaya eklediyse o uygulamanın simgesi/adı görünüyor (Hiddify, v2box, v2rayNG, Streisand, Clash, sing-box, Shadowrocket... — son User-Agent'tan).
 - Cihaz (HWID) limiti aşma denemeleri artık aktivite loglarına ayrıntılı yazılıyor (kullanıcı, engellenen cihaz, IP, uygulama). Not: Hiddify/v2box gibi donanım kimliği göndermeyen uygulamaların sayılması için Ayarlar › Abonelik'teki 'Parmak izi cihazları' seçeneğini açman gerekir (uygulama+IP ile sayar).
 
-## v1.34.1 <span class="date">2026-10-23</span>
-
-
 ## v1.34.0 <span class="date">2026-10-23</span>
 
 - Kayıtlı SSH anahtar kütüphanesi: anahtarları bir kez kaydet/üret, node kurarken listeden seç — her seferinde yapıştırmaya gerek yok. SSH (key) formunda 'Kayıtlı anahtar' seçici + 'Yeni üret' (panelde Ed25519 üretir, açık anahtarı gösterir: VPS'in authorized_keys'ine ekle) + yapıştırılan anahtarı 'Kütüphaneye kaydet'. Anahtarlar şifreli saklanır; özel anahtar hiçbir zaman geri döndürülmez.
@@ -384,15 +381,6 @@ outline: false
 
 - Panel artık panelden güncelleniyor: yeni sürümü denetle, değişiklikleri gör, tek tıkla güncelle (önce yedek alınır, sorun olursa eski sürüme geri dönülür)
 - Alexen sürüm numaraları ve Telegram destek bağlantısı (@alexvpns)
-
-## v1.4.3 <span class="date">2026-10-14</span>
-
-
-## v1.4.2 <span class="date">2026-10-14</span>
-
-
-## v1.4.1 <span class="date">2026-10-14</span>
-
 
 ## v1.4.0 <span class="date">2026-10-14</span>
 

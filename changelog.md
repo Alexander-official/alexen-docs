@@ -155,9 +155,6 @@ outline: false
 - The user row now shows, under the name, the app the subscription was imported into (Hiddify, v2box, v2rayNG, Streisand, Clash, sing-box, Shadowrocket... — from the last User-Agent).
 - Device (HWID) limit breach attempts are now written to the activity log in detail (user, blocked device, IP, app). Note: to count apps that send no hardware id (Hiddify/v2box), enable 'Fingerprint devices' in Settings › Subscription (counts by app+IP).
 
-## v1.34.1 <span class="date">2026-10-23</span>
-
-
 ## v1.34.0 <span class="date">2026-10-23</span>
 
 - Saved SSH key library: save/generate a key once and pick it from a list when installing nodes — no more pasting each time. The SSH (key) form gets a 'Saved key' picker + 'Generate new' (makes an Ed25519 key in the panel and shows the public key to add to the VPS authorized_keys) + 'Save to library' for a pasted key. Keys are stored encrypted; the private key is never returned.
@@ -384,15 +381,6 @@ outline: false
 
 - The panel updates itself from the panel: check for a new version, see what changed, update with one click (a backup first, back to the old version if something goes wrong)
 - Alexen version numbers and the Telegram support link (@alexvpns)
-
-## v1.4.3 <span class="date">2026-10-14</span>
-
-
-## v1.4.2 <span class="date">2026-10-14</span>
-
-
-## v1.4.1 <span class="date">2026-10-14</span>
-
 
 ## v1.4.0 <span class="date">2026-10-14</span>
 
