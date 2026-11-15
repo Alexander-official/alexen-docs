@@ -38,6 +38,19 @@ Kullanıcı linki tarayıcıda açınca hesabını, platforma göre (iOS, Androi
 
 ![Harici yapılandırmalar](/img/tr/external-configs.webp)
 
+### Başka bir sağlayıcıdan abonelik çekme
+
+Harici yapılandırma bir **abonelik kaynağı** da olabilir: panel sağlayıcının aboneliğini indirir ve sunucularını kullanıcılarının aboneliğine ekler. Çekerken bir Happ uygulaması gibi davranabilir:
+
+- **User-Agent:** Happ, v2rayNG, Hiddify ya da Streisand seç, ya da kendin yaz.
+- **Happ gibi cihaz kimliği (HWID) gönder:** varsayılan açık. Panel `x-hwid` ile birlikte `x-device-os`, `x-ver-os` ve `x-device-model` başlıklarını gönderir; linki bir cihaza bağlayan sağlayıcılar için.
+- **Cihaz kimliği (HWID):** her kaynağın kendi kimliği var. Boş bırakırsan kaydederken üretilir ve hep aynı kalır; sağlayıcı tek cihaz sayar. Sağlayıcının zaten bildiği kimliği yapıştırabilir ya da yenisini üretebilirsin.
+- Önizleme tam olarak hangi isteğin gideceğini gösterir, örneğin:
+
+```bash
+curl -L -A "Happ/3.24.1" -H "x-hwid: 98a732ea837007c6" -H "x-device-os: Android" "https://saglayici.example.com/sub/TOKEN"
+```
+
 ## Sınırlar
 
 - **Güncelleme aralığı**: uygulamalara ne sıklıkla yenilemeleri söylenir (saat).

@@ -5,6 +5,10 @@ outline: false
 
 # Changelog
 
+## v2.3.16 <span class="date">2026-11-15</span>
+
+- External configs now send a device id when they pull a subscription, like Happ: x-hwid together with the x-device-os, x-ver-os and x-device-model headers. Each source has its own HWID (if left empty one is made when you save and never changes); you can paste one or generate a new one. The device OS, version and model are set too. There are ready User-Agent choices (Happ, v2rayNG, Hiddify, Streisand) and a curl preview that shows exactly how the panel pulls the source. Existing sources pull with a fixed HWID automatically; switch off 'Send a device id (HWID) like Happ' to go back.
+
 ## v2.3.15 <span class="date">2026-11-15</span>
 
 - The webhook is now managed from the panel (below Settings → Google links). Everything the .env had is here: addresses, the secret (shown in full, with show/copy/generate), which events are sent (user created/updated/deleted, status change, usage reset, subscription renewed, usage and days-left thresholds, sign-in), the threshold values, and the retry time and count. You can send a test event and see the latest attempt and how many are waiting. Settings saved in the panel win over .env; "Use the .env values" undoes it. No server restart needed.

@@ -38,6 +38,19 @@ The **Sub page** tab holds the title and announcement apps show. Per state you c
 
 ![External configs](/img/external-configs.webp)
 
+### Pulling a subscription from another provider
+
+An external config can also be a **subscription source**: the panel downloads the provider's subscription and adds its servers to your users' subscriptions. When it pulls, it can behave like a Happ app:
+
+- **User-Agent:** choose Happ, v2rayNG, Hiddify or Streisand, or type your own.
+- **Send a device id (HWID) like Happ:** on by default. The panel sends `x-hwid` plus `x-device-os`, `x-ver-os` and `x-device-model`, for providers that tie a link to a device.
+- **Device id (HWID):** every source has its own. Left empty, one is made when you save and never changes, so the provider counts one device. You can paste the id your provider already knows or generate a new one.
+- A preview shows the exact request, for example:
+
+```bash
+curl -L -A "Happ/3.24.1" -H "x-hwid: 98a732ea837007c6" -H "x-device-os: Android" "https://provider.example.com/sub/TOKEN"
+```
+
 ## Limits
 
 - **Update interval:** how often apps are told to refresh, in hours.

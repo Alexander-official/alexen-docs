@@ -5,6 +5,10 @@ outline: false
 
 # Sürüm notları
 
+## v2.3.16 <span class="date">2026-11-15</span>
+
+- Harici yapılandırmalarda abonelikten çekerken artık Happ gibi cihaz kimliği gönderiliyor: x-hwid ile birlikte x-device-os, x-ver-os ve x-device-model başlıkları. Her kaynağın kendi HWID'i var (boş bırakılırsa kaydederken üretilir ve hep aynı kalır); elle yapıştırabilir ya da yenisini üretebilirsin. Cihaz işletim sistemi, sürümü ve modeli de ayarlanır. User-Agent için hazır seçenekler (Happ, v2rayNG, Hiddify, Streisand) ve panelin kaynağı tam olarak nasıl çekeceğini gösteren bir curl önizlemesi eklendi. Eski kaynaklar da otomatik olarak sabit bir HWID ile çeker; istemeyenler 'Happ gibi cihaz kimliği gönder' anahtarını kapatır.
+
 ## v2.3.15 <span class="date">2026-11-15</span>
 
 - Webhook artık panelden yönetiliyor (Ayarlar → Google bağlantıları sayfasının altında). .env'deki her şey burada: adresler, secret (tam görünür, göster/kopyala/üret), hangi olayların gönderileceği (kullanıcı oluşturma/güncelleme/silme, durum değişimi, kullanım sıfırlama, abonelik yenileme, kullanım ve kalan gün eşikleri, giriş), eşik değerleri, yeniden deneme süresi ve sayısı. Test olayı gönderme, son denemenin sonucu ve kuyrukta bekleyen sayısı da var. Panelde kaydedilen ayarlar .env'nin önüne geçer; "Yeniden .env değerlerini kullan" geri alır. Sunucuyu yeniden başlatmak gerekmez.
