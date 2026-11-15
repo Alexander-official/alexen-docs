@@ -5,6 +5,12 @@ outline: false
 
 # Sürüm notları
 
+## v2.3.14 <span class="date">2026-11-15</span>
+
+- Yeni bölüm: Google bağlantıları (Ayarlar). Notu listedeki bir bağlantıyla başlayan kullanıcıya (varsayılan https://www.googleapis.com/ — örneğin bir webhook'un nota yazdığı Google Drive dosyası) o bağlantı abonelik bağlantısı olarak verilir; panelde, botta ve QR kodda. Varsayılan kapalı. Bağlantı başlangıçlarını sen belirlersin, kaç kullanıcının böyle bir notu olduğunu görürsün, bir notu deneyebilirsin ve webhook'un durumunu (WEBHOOK_ADDRESS / WEBHOOK_SECRET) görürsün.
+- Engelli IP'ler, Abonelik istatistikleri ile Çekirdek, Inbound ve JSON abonelik sayfaları Farsça, Türkmence ve Çinceye (eksik yerlerde Rusçaya da) çevrildi.
+- Dokümantasyon sitesi yayında: docs.alexateam.ru (kılavuz + eksiksiz API referansı).
+
 ## v2.3.13 <span class="date">2026-11-12</span>
 
 - Yeni bölüm: Abonelik istatistikleri. Her abonelik çekimi kaydedilir: kim (kullanıcı, IP), hangi uygulama ve sürüm, hangi biçim, kaç KB gitti, kaç ms sürdü. Özet (toplamlar, zamana göre grafik, uygulamaya/biçime göre, en çok güncelleyen kullanıcı ve IP'ler), süzülebilir kayıt listesi ve Sınırlar sekmesi: IP başına dakikada, kullanıcı başına saatte en çok güncelleme ve en az bekleme süresi (aşan 429 alır), saklama süresi. Yöneticiler yalnızca kendi kullanıcılarını görür. Sık güncelleyen IP'yi tek tıkla engelleyebilirsin.

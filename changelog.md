@@ -5,6 +5,12 @@ outline: false
 
 # Changelog
 
+## v2.3.14 <span class="date">2026-11-15</span>
+
+- New section: Google links (Settings). A user whose Note starts with a listed link (by default https://www.googleapis.com/ — for example a Google Drive file a webhook writes into the note) is given that link as their subscription link, in the panel, the bot and the QR code. Off by default. You set the link starts, see how many users have such a note, try a note, and see the state of the webhook (WEBHOOK_ADDRESS / WEBHOOK_SECRET).
+- Blocked IPs, Subscription statistics and the Core, Inbound and JSON subscription pages are now translated into Persian, Turkmen and Chinese (and Russian where missing).
+- The documentation site is live: docs.alexateam.ru (guide + complete API reference).
+
 ## v2.3.13 <span class="date">2026-11-12</span>
 
 - New section: Subscription statistics. Every subscription fetch is logged: who (user, IP), which app and version, which format, how many KB were sent and how long it took. Overview (totals, chart over time, by app / format, the users and IPs fetching most), a filterable log, and a Limits tab: most fetches per minute per IP, per hour per user, least wait between fetches (over it gets 429), and how long to keep records. Admins only see their own users. An IP that fetches too often can be blocked in one click.

@@ -10,6 +10,7 @@ module.exports = [
   { name: "domain", url: "/domain" },
   { name: "sub-stats", url: "/sub-stats" },
   { name: "blocked-ips", url: "/blocked-ips" },
+  { name: "google-links", url: "/google-links" },
   { name: "activity", url: "/activity" },
   { name: "alerts", url: "/alerts" },
   { name: "admins", url: "/admins" },

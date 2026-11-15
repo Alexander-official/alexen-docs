@@ -25,6 +25,11 @@
   "count": 5
  },
  {
+  "text": "Note links",
+  "link": "/api/note-links",
+  "count": 2
+ },
+ {
   "text": "Blocked IPs",
   "link": "/api/blocked-ips",
   "count": 4
