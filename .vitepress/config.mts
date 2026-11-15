@@ -83,6 +83,7 @@ export default defineConfig({
   title: "Alexen",
   description: "Alexen panel documentation: user guide and complete API reference.",
   cleanUrls: true,
+  srcExclude: ["README.md", "scripts/**"],
   lastUpdated: false,
   base: process.env.DOCS_BASE || "/",
   head: [
