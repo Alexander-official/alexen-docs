@@ -5,6 +5,12 @@ outline: false
 
 # Sürüm notları
 
+## v2.3.19 <span class="date">2026-11-16</span>
+
+- JSON aboneliğinde Auto (balancer) config artık yeni Xray istemcilerinin reddettiği sunucuları (TLS/REALITY ve VLESS şifrelemesi olmayan, genel IP adresli VLESS) dışarıda bırakıyor. Tek bir böyle sunucu tüm Auto config'i "vless without TLS or other encryption is prohibited" hatasıyla bozuyordu.
+- Yeni seçenek: Auto config'teki protokolleri sen seç (vless, vmess, trojan, shadowsocks, hysteria; hiçbiri seçili değilse hepsi) — örneğin yalnızca Hysteria. Auto config'in adında &#123;USERNAME&#125;, &#123;DATA_USAGE&#125;, &#123;DATA_LEFT&#125;, &#123;DATA_LIMIT&#125;, &#123;DAYS_LEFT&#125;, &#123;EXPIRE_DATE&#125;, &#123;TIME_LEFT&#125;, &#123;STATUS_EMOJI&#125; yer tutucuları kullanılabilir (Abonelik ayarları → JSON).
+- Düzeltme: node'a Xray sürümü kurarken yeniden başlatma atlanıyordu (kurulum başarılı olsa da hata gösteriyordu).
+
 ## v2.3.18 <span class="date">2026-11-15</span>
 
 - Webhook artık host değişikliklerinde de çalışıyor. Host eklemek/düzenlemek/taşımak, grup, harici config ve çekirdek değişiklikleri (ve node eklemek) bir "hosts_changed" olayı gönderir. Ayrıca yeni anahtar: "Bunlar değişince tüm kullanıcıları yeniden gönder" — son değişiklikten yaklaşık 15 saniye sonra her kullanıcı "user_updated" olarak gönderilir (arka arkaya birkaç düzenleme tek sefer gönderir), böylece kullanıcı başına Google Drive dosyası üreten servis dosyaları yeniden yapabilir. Sayfada "Tüm kullanıcıları şimdi gönder" düğmesi de var. Olaylar 50'şerli gruplar halinde gönderilir.

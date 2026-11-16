@@ -905,6 +905,7 @@ JSON subscription: clients, direct sites, external configs, the auto (balancer) 
 | `include_external` | `boolean` |  |
 | `balancer` | `boolean` |  |
 | `balancer_external` | `boolean` |  |
+| `balancer_protocols` | `string[]` |  |
 | `balancer_name` | `string` |  |
 | `balancer_strategy` | `string` |  |
 | `balancer_position` | `string` |  |
@@ -922,6 +923,7 @@ JSON subscription: clients, direct sites, external configs, the auto (balancer) 
   "include_external": true,
   "balancer": false,
   "balancer_external": true,
+  "balancer_protocols": [],
   "balancer_name": "⚡ Auto (fastest)",
   "balancer_strategy": "leastPing",
   "balancer_position": "top",
@@ -960,6 +962,7 @@ Change JSON subscription settings: clients, direct sites, external configs and t
 | `include_external` | `boolean` | no | Default: `true`. |
 | `balancer` | `boolean` | no | Default: `false`. |
 | `balancer_external` | `boolean` | no | Default: `true`. |
+| `balancer_protocols` | `string[]` | no | Default: `[]`. |
 | `balancer_name` | `string` | no | Default: `"\u26a1 Auto (fastest)"`. |
 | `balancer_strategy` | `string` | no | Default: `"leastPing"`. |
 | `balancer_position` | `string` | no | Default: `"top"`. |
@@ -975,6 +978,7 @@ Change JSON subscription settings: clients, direct sites, external configs and t
   "include_external": true,
   "balancer": false,
   "balancer_external": true,
+  "balancer_protocols": [],
   "balancer_name": "⚡ Auto (fastest)",
   "balancer_strategy": "leastPing",
   "balancer_position": "top",
@@ -996,6 +1000,7 @@ Change JSON subscription settings: clients, direct sites, external configs and t
 | `include_external` | `boolean` |  |
 | `balancer` | `boolean` |  |
 | `balancer_external` | `boolean` |  |
+| `balancer_protocols` | `string[]` |  |
 | `balancer_name` | `string` |  |
 | `balancer_strategy` | `string` |  |
 | `balancer_position` | `string` |  |
@@ -1013,6 +1018,7 @@ Change JSON subscription settings: clients, direct sites, external configs and t
   "include_external": true,
   "balancer": false,
   "balancer_external": true,
+  "balancer_protocols": [],
   "balancer_name": "⚡ Auto (fastest)",
   "balancer_strategy": "leastPing",
   "balancer_position": "top",
@@ -1027,7 +1033,7 @@ Errors: `401` Unauthorized
 curl -X PUT 'https://YOUR-PANEL/api/json-sub-settings' \
   -H 'Authorization: Bearer $TOKEN' \
   -H 'Content-Type: application/json' \
-  -d '{"clients": [], "direct_domains": [], "direct_ips": [], "block_ads": false, "include_external": true, "balancer": false, "balancer_external": true, "balancer_name": "⚡ Auto (fastest)", "balancer_strategy": "leastPing", "balancer_position": "top", "probe_url": "https://www.gstatic.com/generate_204", "probe_interval": "1m"}'
+  -d '{"clients": [], "direct_domains": [], "direct_ips": [], "block_ads": false, "include_external": true, "balancer": false, "balancer_external": true, "balancer_protocols": [], "balancer_name": "⚡ Auto (fastest)", "balancer_strategy": "leastPing", "balancer_position": "top", "probe_url": "https://www.gstatic.com/generate_204", "probe_interval": "1m"}'
 ```
 
 </section>

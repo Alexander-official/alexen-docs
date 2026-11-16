@@ -5,6 +5,12 @@ outline: false
 
 # Changelog
 
+## v2.3.19 <span class="date">2026-11-16</span>
+
+- The JSON subscription's Auto (balancer) config now leaves out servers that new Xray clients reject (VLESS with no TLS/REALITY and no VLESS encryption on a public IP). One such server used to break the whole Auto config with "vless without TLS or other encryption is prohibited".
+- New option: choose which protocols the Auto config uses (vless, vmess, trojan, shadowsocks, hysteria; none chosen = all), e.g. Hysteria only. The Auto config's name accepts the placeholders &#123;USERNAME&#125;, &#123;DATA_USAGE&#125;, &#123;DATA_LEFT&#125;, &#123;DATA_LIMIT&#125;, &#123;DAYS_LEFT&#125;, &#123;EXPIRE_DATE&#125;, &#123;TIME_LEFT&#125;, &#123;STATUS_EMOJI&#125; (Subscription settings → JSON).
+- Fix: installing an Xray version on a node skipped the restart (and showed an error even though the install worked).
+
 ## v2.3.18 <span class="date">2026-11-15</span>
 
 - The webhook now fires on host changes too. Adding/editing/moving hosts, and changes to groups, external configs and cores (and adding a node) send a "hosts_changed" event. There is also a new switch: "Send every user again when they change" — about 15 seconds after the last change every user is sent as "user_updated" (several edits in a row send once), so a service that builds a Google Drive file per user can rebuild the files. The page has a "Send all users now" button too. Events go out in slices of 50.
