@@ -5,6 +5,10 @@ outline: false
 
 # Changelog
 
+## v2.3.20 <span class="date">2026-11-18</span>
+
+- Fix: the inbound order in Host settings went back to the old one after saving and reopening. The browser moves number-like inbound names such as '444' to the front; the order now comes from the server as a list (new GET /api/hosts/order).
+
 ## v2.3.19 <span class="date">2026-11-16</span>
 
 - The JSON subscription's Auto (balancer) config now leaves out servers that new Xray clients reject (VLESS with no TLS/REALITY and no VLESS encryption on a public IP). One such server used to break the whole Auto config with "vless without TLS or other encryption is prohibited".

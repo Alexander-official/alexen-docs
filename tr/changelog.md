@@ -5,6 +5,10 @@ outline: false
 
 # Sürüm notları
 
+## v2.3.20 <span class="date">2026-11-18</span>
+
+- Düzeltme: Host ayarlarında inbound sıralaması kaydedilip pencere yeniden açılınca eskisine dönüyordu. Tarayıcı '444' gibi sayı olan inbound adlarını listenin başına alıyordu; sıra artık sunucudan liste olarak geliyor (yeni GET /api/hosts/order).
+
 ## v2.3.19 <span class="date">2026-11-16</span>
 
 - JSON aboneliğinde Auto (balancer) config artık yeni Xray istemcilerinin reddettiği sunucuları (TLS/REALITY ve VLESS şifrelemesi olmayan, genel IP adresli VLESS) dışarıda bırakıyor. Tek bir böyle sunucu tüm Auto config'i "vless without TLS or other encryption is prohibited" hatasıyla bozuyordu.

@@ -7,7 +7,7 @@ outline: [2, 3]
 
 Server resources and system information.
 
-<p class="api-count">9 endpoints</p>
+<p class="api-count">10 endpoints</p>
 
 <section class="ep">
 
@@ -132,6 +132,34 @@ curl -X PUT 'https://YOUR-PANEL/api/hosts' \
   -H 'Authorization: Bearer $TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{ ... }'
+```
+
+</section>
+
+<section class="ep">
+
+## <span class="m m-get">GET</span> `/api/hosts/order` {#get-api-hosts-order}
+
+**Get Hosts Order**
+
+The inbound tags in the order they take in subscriptions (a list, so the order survives
+JSON parsing: browsers move number-like object keys such as "444" to the front).
+
+<p class="badges"><span class="b b-sudo">Sudo admin only</span></p>
+
+**Response** `200` Successful Response · `string[]`
+
+```json
+[
+  "string"
+]
+```
+
+Errors: `401` Unauthorized, `403` Forbidden
+
+```bash
+curl -X GET 'https://YOUR-PANEL/api/hosts/order' \
+  -H 'Authorization: Bearer $TOKEN'
 ```
 
 </section>
